@@ -1,0 +1,135 @@
+package DSA;
+
+
+
+public class Circular_linked 
+
+{					//Circular_linked
+
+	Node last;
+
+class Node
+
+{
+
+	int data;
+
+	Node next=null;
+
+	
+
+	Node(int val)
+
+	{
+
+		data=val;
+
+		next=null;
+
+	}
+
+}
+
+Circular_linked()
+
+{
+
+	last=null;
+
+	
+
+}
+
+public void insertAtBegin(int val)
+
+{
+
+	Node newnode=new Node(val);
+
+	if(last==null)
+
+	{
+
+		last=newnode;
+
+		last.next=last;
+
+		
+
+	}
+
+	else
+
+	{
+
+		newnode.next=last;
+
+		last.next=newnode;
+
+
+
+		
+
+	}
+
+}
+
+public void display()
+
+{
+
+	Node temp=last.next;
+
+	Node temp1=last;
+
+	while(temp!=last)
+
+	{
+
+		System.out.println(temp.data+" ");
+
+		temp=temp.next;
+
+	
+
+	}
+
+	System.out.println(temp.data);
+
+	
+
+	}
+
+public void inserAtEnd(int val)
+
+{
+
+	Node newnode=new Node(val);
+
+	if(last==null)
+
+	{
+
+		last=newnode;
+
+		last.next=last;
+
+		
+
+	}
+
+	else
+
+	{
+
+		newnode.next=last;
+
+		last.next=newnode;
+
+}
+
+	
+
+	}
+
+}
